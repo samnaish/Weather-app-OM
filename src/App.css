@@ -6,6 +6,39 @@
 
 .app__current {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     border: 1px solid red;
+}
+
+.app__current-image {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.app__current-info {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+}
+
+.app__current-location {
+    max-height: 15px;
+    max-width: 15px;
+}
+
+.app_days {
+    display: flex;
+    flex-direction: row;
+}
+
+.app__days-forecast {
+    border: 1px solid deeppink;
+    padding: 5px;
+
+}
+
+.app__forecast-temp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
