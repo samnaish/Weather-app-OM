@@ -1,11 +1,13 @@
-import React,{ Fragment } from 'react';
+import React from 'react';
+
+import './index.css'
 
 const Location = ({name}) => {
     return (
-        <Fragment>
-            <img className="app__current-location" src="https://www.clipartmax.com/png/small/151-1517460_icon-contact-flat-web-business-symbol-blue-location-pin-icon-png.png"/>
-            <span>{name}</span>  
-        </Fragment>
+        <div className="app-container">
+            <img className="app__current-location" src="https://www.flaticon.com/svg/vstatic/svg/684/684809.svg?token=exp=1616177254~hmac=110c8d9ab5d6f3c80043a0f605c99a53"/>
+            <p className="app__current-city">{name}</p>  
+        </div>
     )
 }
 

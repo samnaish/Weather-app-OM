@@ -2,50 +2,126 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Lato';
 }
 
 .app {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin: 20px auto;
+    max-width: 900px;
 }
 
 .app__current {
     display: flex;
     flex-direction: row;
-    border: 1px solid red;
-    width: 70vh;
-    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+}
+
+.app__current-container {
+    display: flex;
+    border: 1px solid rgba(71, 142, 255, 0.8);
+    flex-direction: row;
+    background-color: rgba(71, 142, 255, 0.8);
+    background-image:
+    linear-gradient(
+        #87b5ff, #2970e3
+    );
+}
+
+.app__current-today {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 100;
+    color: #fff;
+}
+
+.app__current-immage-container {
+    padding: 5px;
 }
 
 .app__current-image {
+    margin: 20px auto;
     max-width: 200px;
     max-height: 200px;
+    width: 15vh;
+    color: #fff;
 }
 
 .app__current-info {
-    border: 1px solid green;
     display: flex;
     flex-direction: column;
+    width: 20vh;
+}
+
+.app__current-temp {
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+}
+
+.app-container {
+    display: flex;
+    margin: 5px;
+    flex-direction: row;
 }
 
 .app__current-location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     max-height: 15px;
-    max-width: 15px;
+    margin: 15px 2px;
+}
+
+.app__current-city {
+    color: #fff;
+    margin: 5px 0;
 }
 
 .app_days {
     display: flex;
     flex-direction: row;
 }
-
 .app__days-forecast {
-    border: 1px solid deeppink;
+    border: 1px solid rgb(117 104 255);
+    background-color: rgba(1, 43, 111, 0.6);
     padding: 5px;
-
+    width: 20vh;
 }
 
 .app__forecast-temp {
     display: flex;
     flex-direction: row;
+    padding: 10px;
     justify-content: space-between;
+}
+
+.app__day {
+    font-weight: 100;
+    color: #fff;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.app__icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__max-temp {
+    margin-left: 5px;
+    color: #ffffffd9
+}
+
+.app__min-temp {
+    margin-right: 5px;
+    color: #353434e0;
 }

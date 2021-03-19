@@ -34,17 +34,19 @@ const App = () => {
     }
 
     if (error) {
-        return <div>Error: {error.message}</div>;
+        return <div className="app__error">Error: {error.message}</div>;
     } else {
         return(
             <div className="app">
                 <div className="app__current">
-                    <img className="app__current-image" src={condition.icon} alt={"Icon "+condition.text}/>
-                    <div className="app__current-info">
-                        <span>Today</span>
-                        <span>{currentRes.temp_c}°</span>
-                        <div>
-                            <Location name={locationRes.name} /> 
+                    <div className="app__current-container">
+                        <img className="app__current-image" src={condition.icon} alt={"Icon "+condition.text}/>
+                        <div className="app__current-info">
+                            <h3 className="app__current-today">Today</h3>
+                            <span className="app__current-temp">{currentRes.temp_c}°</span>
+                            <div className="app__current-location">
+                                <Location name={locationRes.name} /> 
+                            </div>
                         </div>
                     </div>
                     <div className="app_days">
@@ -52,11 +54,9 @@ const App = () => {
                             <div key={index} className="app__days-forecast">
                                 <Slate date={getDayOfWeek(item.date)} icon={item.day.condition.icon} maxTemp={item.day.maxtemp_c} minTemp={item.day.mintemp_c}/>
                             </div>
-
                         ))}
                     </div>
                 </div>
-                {/* <Slate/> */}
             </div>
         )
       }
