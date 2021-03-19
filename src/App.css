@@ -4,10 +4,17 @@
     margin: 0;
 }
 
+.app {
+    display: block;
+    margin: 20px auto;
+}
+
 .app__current {
     display: flex;
     flex-direction: row;
     border: 1px solid red;
+    width: 70vh;
+    height: 30vh;
 }
 
 .app__current-image {

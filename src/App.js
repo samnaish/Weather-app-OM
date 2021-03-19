@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 import './App.css';
 import Slate from './components/Slate';
+import Location from './components/Location'
 
 const App = () => {
 
@@ -42,29 +43,18 @@ const App = () => {
                     <div className="app__current-info">
                         <span>Today</span>
                         <span>{currentRes.temp_c}°</span>
-                        <span>
-                            <img className="app__current-location" src="https://www.clipartmax.com/png/small/151-1517460_icon-contact-flat-web-business-symbol-blue-location-pin-icon-png.png"/>
-                            <span>{locationRes.name}</span>
-                            
-                        </span>
+                        <div>
+                            <Location name={locationRes.name} /> 
+                        </div>
                     </div>
                     <div className="app_days">
                         {forecast.map((item, index) => (
                             <div key={index} className="app__days-forecast">
-                                <h3>{getDayOfWeek(item.date)}</h3>
-                                <img className="app__forecast-icon" src={item.day.condition.icon}/>
-                                <div className="app__forecast-temp">
-                                    <p className="app__max-temp">{item.day.maxtemp_c}°</p>
-                                    <p className="app__min-temp">{item.day.mintemp_c}°</p>
-                                </div>
+                                <Slate date={getDayOfWeek(item.date)} icon={item.day.condition.icon} maxTemp={item.day.maxtemp_c} minTemp={item.day.mintemp_c}/>
                             </div>
+
                         ))}
                     </div>
-
-                    {/* {console.log("currentRes", currentRes)} */}
-                    {/* {console.log("locationRes", locationRes)} */}
-                    {/* {console.log("Forecast", forecast)} */}
-                    {/* {console.log("condition", condition)} */}
                 </div>
                 {/* <Slate/> */}
             </div>
